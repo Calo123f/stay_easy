@@ -27,7 +27,12 @@ export default function SearchPage() {
         }));
         
         // Automatically search if destination is provided
-        handleSearch({ destination });
+        handleSearch({
+          destination,
+          checkIn: '', // Provide empty string or default value
+          checkOut: '', // Provide empty string or default value 
+          guests: 2 // Provide default number of guests
+        });
       }
     }
   }, []);
