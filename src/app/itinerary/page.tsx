@@ -29,7 +29,7 @@ export default function ItineraryPage() {
     // Calculate number of days
     const start = new Date(itinerary.startDate);
     const end = new Date(itinerary.endDate);
-    const diffTime = Math.abs(end - start);
+    const diffTime = Math.abs(end.getTime() - start.getTime());
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
     
     // Generate empty days
